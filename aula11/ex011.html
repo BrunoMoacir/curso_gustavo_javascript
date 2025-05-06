@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País Residência</title>
+</head>
+<body>
+    <h1> País de Residência</h1>
+    Digite o seu país: <input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular(){
+            var txt = window.document.querySelector('input#txtpaís')
+            var res = window.document.querySelector('div#res')
+            var país = txt.value.trim()
+            res.innerHTML= `<p> Você vive no país ${país}.</p>`
+            if (país == 'Brasil') {
+                res.innerHTML+= '<p>Você é Brasileira.</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeira</p>'
+        }
+    }
+    </script>
+    
+</body>
+</html>
